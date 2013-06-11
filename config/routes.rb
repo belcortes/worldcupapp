@@ -1,7 +1,12 @@
 WorldcupApp::Application.routes.draw do
 
   resources :cities
-  
+  resources :stadia
+  resources :games
+  resources :itineraries
+  resources :users
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

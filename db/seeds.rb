@@ -17,6 +17,35 @@ c10 = City.create(name:"Porto Alegre", pop_size: 1509939, fun_fact: " The vast m
 c11 = City.create(name:"Recife", pop_size: 1555039, fun_fact: "Aside from a small but pretty historical core, it's not really worth a visit", airport: "Guararapes International Airport")
 c12 = City.create(name:"Fortaleza", pop_size: 2515116, fun_fact: "The first Portuguese settlers arrived in the area in 1603", airport: "Fortaleza International Airport")
 
+s1 = Stadium.create(name:"Estadio do Maracana", location: "Rio de Janeiro", capacity: 76935)
+s2 = Stadium.create(name:"Arena del Sao Paulo", location: "Sao Paulo", capacity: 68000)
+s3 = Stadium.create(name:"Estadio Nacional Mane Garrincha", location: "Brasilia", capacity: 70042)
+s4 = Stadium.create(name:"Estadio Mineirao", location: "Belo Horizonte", capacity: 62547)
+s5 = Stadium.create(name:"Arena Pantanal", location: "Cuiaba", capacity: 42968)
+s6 = Stadium.create(name:"Arena da Baixada", location: "Curitiba", capacity: 43900)
+s7 = Stadium.create(name:"Itaipava Arena Fonte Nova", location: "Salvador", capacity: 56000)
+s8 = Stadium.create(name:"Arena Amazonia", location: "Manaus", capacity: 42374)
+s9 = Stadium.create(name:"Arena das Dunas", location: "Natal", capacity: 42086)
+s10 = Stadium.create(name:"Estadio Beira-Rio", location: "Porto Alegre", capacity: 51300)
+s11 = Stadium.create(name:"Itaipava Arena Pernambuco", location: "Recife", capacity: 46154)
+s12 = Stadium.create(name:"Estadio Castelao", location: "Fortaleza", capacity: 64846)
+
+c1.stadia << s1
+c2.stadia << s2
+c3.stadia << s3
+c4.stadia << s4
+c5.stadia << s5
+c6.stadia << s6
+c7.stadia << s7
+c8.stadia << s8
+c9.stadia << s9
+c10.stadia << s10
+c11.1stadia << s11
+c12.s2tadia << s12
+
+
+
+
 
 
 

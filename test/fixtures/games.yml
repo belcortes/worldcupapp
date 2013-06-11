@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  match: MyText
+  time: 2013-06-10 17:09:57
+  date: 2013-06-10
+
+two:
+  match: MyText
+  time: 2013-06-10 17:09:57
+  date: 2013-06-10
