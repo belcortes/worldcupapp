@@ -1,0 +1,28 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title WorldCup_app
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    <div class="container"%>
+    .row
+      .large-4.columns
+        %h2 Joga Bonito
+      .large-8.columns
+        %h2 Eight Columns
+        = yield
+      
+
+    - if current_user
+      = current_user.name
+      = link_to 'logout', logout_path, method: :delete
+
+    
+ 
+
+    :javascript 
+      $(document).foundation();

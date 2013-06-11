@@ -4,7 +4,12 @@ WorldcupApp::Application.routes.draw do
   resources :stadia
   resources :games
   resources :itineraries
-  resources :users
+  resources :users, only: [:new, :create]
+  get 'sessions/new' => 'sessions#new'
+  post 'sessions' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
+
 
 
   # The priority is based upon order of creation:

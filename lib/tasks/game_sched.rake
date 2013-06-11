@@ -1,6 +1,8 @@
 desc "Fetch Game Schedule"
 task :fetch_schedule => :environment do
-  
+  require 'nokogiri'
+  require 'open-uri'
+
 
   Game.find_all_by_schedule(nil).each do |game|
     url = "http://en.wikipedia.org/wiki/2014_FIFA_World_Cup"

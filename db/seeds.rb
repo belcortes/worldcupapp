@@ -1,7 +1,7 @@
 City.delete_all
 # Game.delete_all
 # Itinerary.delete_all
-# Stadium.delete_all
+Stadium.delete_all
 
 
 c1 = City.create(name:"Rio de Janeiro", pop_size: 6323037, fun_fact: "It was the first capital of Brazil", airport: "Galeao International Airport, Santos Dumont Airport")
