@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611205138) do
+ActiveRecord::Schema.define(:version => 20130611230849) do
 
   create_table "cities", :force => true do |t|
     t.string   "name"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20130611205138) do
     t.time     "time"
     t.date     "date"
     t.string   "location"
-    t.integer  "stadium_id"
+    t.integer  "city_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20130611205138) do
 
   create_table "stadia", :force => true do |t|
     t.string   "name"
-    t.string   "location"
+    t.text     "location"
     t.integer  "capacity"
     t.integer  "city_id"
     t.datetime "created_at", :null => false

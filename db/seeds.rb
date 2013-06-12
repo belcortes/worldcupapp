@@ -11,7 +11,7 @@ c4 = City.create(name:"Belo Horizonte", pop_size: 2475440, fun_fact: "Google mai
 c5 = City.create(name:"Cuiaba", pop_size: 942861, fun_fact: "The name is of South American Indian origin, reportedly meaning 'arrow-fishing'", airport: "Marechal Rondon International Airport")
 c6 = City.create(name:"Curitiba", pop_size: 1764540, fun_fact: "Considered the green capital of Brazil. The green urban areas in Curitiba are among the largest in the world", airport: "Afonso Pena International Airport, Bacacheri Airport")
 c7 = City.create(name:"Salvador", pop_size: 2676606, fun_fact: "Salvador is also known as Brazil's capital of happiness due to its countless popular outdoor parties", airport: "Deputado Luis Eduardo Magalhaes International Airport")
-c8 = City.create(name:"Manaus", pop_size: 1861838, fun_fact: "It is the most populous city of Amazonas", airport: "Eduardo Gomes International Airport")
+c8 = City.create(name:"Manaus", pop_size: 1861838, fun_fact: "It is the most populous city of Amazonas", airport: "Eduardo Gomes International Airport", stadium_name:"Arena Amazonia")
 c9 = City.create(name:"Natal", pop_size: 806203, fun_fact: "Is considered the safest capital city in the country", airport: "Augusto Severo International Airport")
 c10 = City.create(name:"Porto Alegre", pop_size: 1509939, fun_fact: " The vast majority of the population is of European descent", airport: "Salgado Filho International Airport")
 c11 = City.create(name:"Recife", pop_size: 1555039, fun_fact: "Aside from a small but pretty historical core, it's not really worth a visit", airport: "Guararapes International Airport")
@@ -42,6 +42,55 @@ c9.stadia << s9
 c10.stadia << s10
 c11.1stadia << s11
 c12.s2tadia << s12
+
+
+
+
+# require 'nokogiri'
+# require 'open-uri'
+
+# dates = []
+# links = []
+# names = []
+
+# url = "http://en.wikipedia.org/wiki/2014_FIFA_World_Cup"
+# doc = Nokogiri::HTML(open(url))
+# doc.css(".vevent").each do |vevent|
+# dates << vevent.at_css(".summary").text
+# names << vevent.at_css("a").text
+# end
+
+# games = []
+
+# create a loop that makes a Game.new for each element inside the games array
+# inside that loop, you need to make the games[n].name = local_name
+# then repeat for...
+# games[n].date = local_date
+# games[n].name = local_name
+
+# game = Game.new
+
+
+
+# game.date = date_variable_inside_loop_below
+
+# def names_filtered
+# 	names.select do |name|	#local name var
+# 	  name != "Brazil"
+
+# 	  game.name = name
+# 	end
+# end
+
+# def dates_filtered
+# 	dates.map do |date|
+# 		date.gsub("\n", " ")
+# 	end
+# end
+
+# game.save!
+
+
 
 
 

@@ -5,7 +5,7 @@ class CreateGames < ActiveRecord::Migration
       t.time :time
       t.date :date
       t.string :location
-      t.integer :stadium_id
+      t.integer :city_id
 
       t.timestamps
     end

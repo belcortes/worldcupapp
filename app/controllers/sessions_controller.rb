@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 		authenticated_user = user.authenticate(params[:password])
 		if authenticated_user
 			session[:user_id] = authenticated_user.id
-			message = 'You are authenticated!'
+			message = ''
 			render text: message, layout: true
 		else
 			redirect_to sessions_new_path

@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  city: MyString
+  location: MyText
   capacity: 1
 
 two:
   name: MyString
-  city: MyString
+  location: MyText
   capacity: 1

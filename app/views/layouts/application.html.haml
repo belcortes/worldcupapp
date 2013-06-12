@@ -8,20 +8,41 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    <div class="container"%>
+
+    %div.container
     .row
       .large-4.columns
-        %h2 Joga Bonito
+        %h3 
+          %a{:href => '/'} Joga Bonito
+          
+        .row.sidebar
+          %h4 
+            %a{:href => '/sessions/new'} Login 
+            %a{:href => '/users/new'}  Sign-Up
+            %a{:href => '/users/new'}  Trip Planner
+          %h4 
+            %a{:href => '/cities'} Cities  
+            %a{:href => '/stadia'} Stadiums 
+            %a{:href => '/games'} Games
+          
+
+          = yield
+          - if current_user
+            = current_user.name
+            = link_to 'logout', logout_path, method: :delete
       .large-8.columns
-        %h2 Eight Columns
-        = yield
+        %h3 Eight Columns
+
+
+
+
+
+
+        
       
 
-    - if current_user
-      = current_user.name
-      = link_to 'logout', logout_path, method: :delete
-
     
+
  
 
     :javascript 

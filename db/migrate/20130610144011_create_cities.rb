@@ -5,7 +5,8 @@ class CreateCities < ActiveRecord::Migration
       t.integer :pop_size
       t.text :fun_fact
       t.text :airport
-      t.integer :stadium_id
+      t.string :stadium_id
+      
 
       t.timestamps
     end
