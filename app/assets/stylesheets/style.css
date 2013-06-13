@@ -1,0 +1,16 @@
+/*.row .columns {
+  background-color: red;  
+}*/
+
+.row {
+  max-width: 95%;
+  margin-top: 15px;
+}
+
+.sidebar {
+  text-align: center;
+}
+
+a {
+  color: black;
+}
