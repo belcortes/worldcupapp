@@ -3,6 +3,11 @@ require 'open-uri'
 
 City.delete_all
 Game.delete_all
+User.delete_all
+
+u1 = User.create(name:"Isabel Cortes", email:"belcortes@gmail.com", password:"pass123", admin: true)
+u2 = User.create(name:"Alex Davidow", email:"alex.davidow@gmail.com", password:"pass123", admin: true)
+u3 = User.create(name:"Bob Hello", email:"bob@example.com", password:"pass123", admin: false)
 
 
 
