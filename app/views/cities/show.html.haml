@@ -1,16 +1,17 @@
 %p
-  Name: #{@city.name}
+  City: #{@city.name}
 %p
-  Name: #{@city.pop_size}
+  Population: #{@city.pop_size}
 %p
-  Name: #{@city.airports}
+  Nearest Airport: #{@city.airports}
 %p
-  Name: #{@city.fun_fact}
+  Fun Fact: #{@city.fun_fact}
 %p
-  Name: #{@city.stadium_name}
+  World Cup Stadium: #{@city.stadium_name}
 %p
-  Name: #{@city.stadium_cap}
-
- 
-
-  / %a{href:"/city/#{@city.id}"}
+  Stadium Capacity: #{@city.stadium_cap}
+%p
+  World Cup Game Dates:
+  - @city.games.each do |game|
+    %br
+    #{game.datetime} 
