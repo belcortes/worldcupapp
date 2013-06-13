@@ -20,5 +20,4 @@ class ItinerariesController < ApplicationController
 
   def destroy
   end
-
 end

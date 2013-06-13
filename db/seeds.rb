@@ -14,3 +14,62 @@ c9 = City.create(name:"Natal", pop_size: 806203, fun_fact: "Is considered the sa
 c10 = City.create(name:"Porto Alegre", pop_size: 1509939, fun_fact: " The vast majority of the population is of European descent", airports: "Salgado Filho International Airport", stadium_name:"Estadio Beira-Rio", stadium_cap: 51300)
 c11 = City.create(name:"Recife", pop_size: 1555039, fun_fact: "Aside from a small but pretty historical core, it's not really worth a visit", airports: "Guararapes International Airport", stadium_name:"Itaipava Arena Pernambuco", stadium_cap: 46154)
 c12 = City.create(name:"Fortaleza", pop_size: 2515116, fun_fact: "The first Portuguese settlers arrived in the area in 1603", airports: "Fortaleza International Airport", stadium_name:"Estadio Castelao", stadium_cap: 64846)
+
+
+
+
+# require 'nokogiri'
+# require 'open-uri'
+
+# dates = []
+# links = []
+# names = []
+
+# url = "http://en.wikipedia.org/wiki/2014_FIFA_World_Cup"
+# doc = Nokogiri::HTML(open(url))
+# doc.css(".vevent").each do |vevent|
+# dates << vevent.at_css(".summary").text
+# names << vevent.at_css("a").text
+# end
+
+# games = []
+
+# create a loop that makes a Game.new for each element inside the games array
+# inside that loop, you need to make the games[n].name = local_name
+# then repeat for...
+# games[n].date = local_date
+# games[n].name = local_name
+
+# game = Game.new
+
+
+
+# game.date = date_variable_inside_loop_below
+
+# def names_filtered
+# 	names.select do |name|	#local name var
+# 	  name != "Brazil"
+
+# 	  game.name = name
+# 	end
+# end
+
+# def dates_filtered
+# 	dates.map do |date|
+# 		date.gsub("\n", " ")
+# 	end
+# end
+
+# game.save!
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 49b072bbcb7a064fa5aa87a5db92c51e60e35c69

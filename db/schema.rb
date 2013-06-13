@@ -32,6 +32,11 @@ ActiveRecord::Schema.define(:version => 20130613200527) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "games_itineraries", :id => false, :force => true do |t|
+    t.integer "game_id"
+    t.integer "itinerary_id"
+  end
+
   create_table "itineraries", :force => true do |t|
     t.string   "name"
     t.date     "start_date"

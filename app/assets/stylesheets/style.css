@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*.row .columns {
   background-color: red;  
 }*/
@@ -13,4 +14,21 @@
 
 a {
   color: black;
+=======
+.row .columns {
+	background-color: red;	
+}
+
+.row {
+	max-width: 95%;
+	margin-top: 15px;
+}
+
+.sidebar {
+	text-align: center;
+}
+
+a {
+	color: black;
+>>>>>>> 49b072bbcb7a064fa5aa87a5db92c51e60e35c69
 }

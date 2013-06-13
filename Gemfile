@@ -12,7 +12,6 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
   gem 'zurb-foundation', '~> 4.0.0'
-
 end
 
 group :development, :test do
@@ -25,3 +24,4 @@ group :development, :test do
   gem 'meta_request'
   gem 'annotate'
 end
+
