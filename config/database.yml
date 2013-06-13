@@ -4,5 +4,5 @@ development:
   database: worldcup_app
   pool: 5
   host: localhost
-  username: alexdavidow
+  username: isabelcortes
   password:
