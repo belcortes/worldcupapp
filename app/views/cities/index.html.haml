@@ -1,11 +1,37 @@
+/ .image
+/   %img{:src => "#"}/
+/ .c_info
+/   Name:
+/   %br/
+/   Population Size:
+/   %br/
+/   Aiports:
+/   %br/
+/   Fun Fact:
+/   %br/
+/   Stadium: 
+/   %br/
+/   Stadium Capacity:
+/   %br/
+
 .image
   %img{:src => "#"}/
 .c_info
-  Name:
+- @cities.each do |city|
+  City:
+  = city.name 
   %br/
   Population Size:
+  = city.pop_size 
   %br/
-  Aiports:
+  Airports:
+  = city.airports
   %br/
   Fun Fact:
- 
+  = city.fun_fact
+  %br/
+  Stadium:
+  = city.stadium_name
+  %br/
+  Stadium Capacity:
+  = city.stadium_cap
