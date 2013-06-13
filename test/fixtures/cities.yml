@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  pop_size: 1
+  fun_fact: MyText
+  airports: MyString
+  stadium_name: MyString
+  stadium_cap: 1
+
+two:
+  name: MyString
+  pop_size: 1
+  fun_fact: MyText
+  airports: MyString
+  stadium_name: MyString
+  stadium_cap: 1
