@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   before_filter :ensure_admin, only: [:index, :destroy]
   def index
-    puts 'enter index'
     @users = User.all
   end
   def new
@@ -15,8 +14,30 @@ class UsersController < ApplicationController
       render :new
     end
   end
+  def edit #will use partial
+    @user = User.find(params[:id])
+  end
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      redirect_to users_path
+    else 
+      @user.errors.each do |e|
+        puts e
+      end
+      render 'edit'
+    end
+  end
   def destroy
-      User.find(params[:id]).delete
+      user = User.find(params[:id])
+      user.delete
       redirect_to :back
   end
 end
+
+  # def create
+  #   song = Song.new(params[:song])
+  #   song.save!
+  #   render nothing: true
+  # end
+  

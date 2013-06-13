@@ -23,6 +23,8 @@
           %h4 
             %a{:href => '/cities'} Cities  
             %a{:href => '/games'} Games
+            - if current_user && current_user.admin
+              %a{:href => '/users'} Users
           
 
           = yield
