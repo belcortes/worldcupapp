@@ -4,7 +4,7 @@
 .c_info
 - @cities.each do |city|
   City:
-  = city.name 
+  #{link_to city.name, city_path(city.id)} 
   %br/
   Population Size:
   = city.pop_size 
