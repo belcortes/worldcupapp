@@ -1,23 +1,12 @@
 class GamesController < ApplicationController
 
+  before_filter :ensure_admin, only: [:create, :update, :destroy]
+
   def index
-  end
-
-  def new
-  end
-
-  def create
+    @games = Game.all
   end
 
   def show
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
+    @game = Game.find(params[:id])
   end
 end

@@ -1,0 +1,7 @@
+.c_info
+- @games.each do |game|
+  Game Date & Time: #{game.datetime}
+  %br
+  Host Stadium: #{game.city.stadium_name}
+  Host City: #{link_to game.city.name, game_path(game.city)}
+  %br

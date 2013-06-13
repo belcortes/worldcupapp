@@ -40,11 +40,9 @@ end
 
 (0...dates.length).each do |i|
   if names[i].nil?
-    binding.pry
   end
   city = City.find_by_stadium_name(names[i].mb_chars.normalize(:kd).gsub(/[^\x00-\x7F]/n,'').to_s)
   if city.nil?
-    binding.pry
   end
   city.games << Game.create(datetime: dates[i])
 end
