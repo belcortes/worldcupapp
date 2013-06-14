@@ -1,11 +1,8 @@
- class ItinerariesController < ApplicationController
+class ItinerariesController < ApplicationController
 
   def index
     @itineraries = Itinerary.all
-    if current_user.itineraries >= 1
-    else
-      redirect_to new_itinerary_path
-    end
+    redirect_to new_itinerary_path unless current_user.itineraries >= 1
   end
 
   def new
@@ -18,6 +15,7 @@
       redirect_to itineraries_path
     else
       render :new
+    end
   end
 
   def show
