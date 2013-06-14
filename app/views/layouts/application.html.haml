@@ -17,8 +17,10 @@
           
         .row.sidebar
           %h4 
-            %a{:href => '/sessions/new'} Login 
-            %a{:href => '/users/new'}  Sign-Up
+            - if !current_user
+              %a{:href => '/sessions/new'} Login
+            - if !current_user 
+              %a{:href => '/users/new'}  Sign-Up
             %a{:href => '/itineraries'}  Trip Planner
           %h4 
             %a{:href => '/cities'} Cities  

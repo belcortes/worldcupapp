@@ -3,7 +3,7 @@
   %br/
   = link_to('delete', user_path(user), method: :delete, confirm: 'Are you sure you want to do this?') if current_user.admin?
   %br/
-  = link_to('edit', user_path(user), method: :get) if current_user.admin?
+  = link_to('edit', edit_user_path(user), method: :get) if current_user.admin?
   %br/
   %br/
 
