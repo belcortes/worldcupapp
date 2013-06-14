@@ -22,14 +22,19 @@
             - if !current_user 
               %a{:href => '/users/new'}  Sign-Up
             %a{:href => '/itineraries'}  Trip Planner
+            - if current_user
+              %a{:href => '/itineraries'} Itineraries
           %h4 
             %a{:href => '/cities'} Cities  
             %a{:href => '/games'} Games
             - if current_user && current_user.admin
               %a{:href => '/users'} Users
+            
           
 
           = yield
+      
+
           - if current_user
             = current_user.name
             = link_to 'logout', logout_path, method: :delete
@@ -78,3 +83,5 @@
 
     :javascript 
       $(document).foundation();
+
+    
