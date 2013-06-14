@@ -1,9 +1,11 @@
 %body
   Your Current Itinerary: 
   %br
+  #{@itinerary.name}
+  %br
   #{@itinerary.start_date}
   %br
   #{@itinerary.end_date}
   %br
-    = link_to 'Edit', edit_user_path(@user), {method: :get, class: "button"}
-    = link_to('Delete', user_path(@user), {method: :delete, confirm: 'Are you sure you want to do this?', class: "button"})
+    = link_to 'Edit', edit_itinerary_path(@itinerary), {method: :get, class: "button"}
+    = link_to('Delete', itinerary_path(@itinerary), {method: :delete, confirm: 'Are you sure you want to do this?', class: "button"})

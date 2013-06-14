@@ -1,11 +1,8 @@
  class ItinerariesController < ApplicationController
 
   def index
-    if current_user.itineraries
-      @itineraries = Itinerary.all
-    else
-      redirect_to new_itinerary_path
-    end
+    @itineraries = Itinerary.all
+    # redirect_to new_itinerary_path unless current_user.itineraries.size >= 1
   end
 
   def new
@@ -30,8 +27,8 @@
   end
 
   def update
-    itinerary = Itinerary.find(params[:id])
-    if itinerary.update_attributes(params[:itinerary])
+    @itinerary = Itinerary.find(params[:id])
+    if @itinerary.update_attributes(params[:itinerary])
       redirect_to itineraries_path
     else
       redirect_to edit_itinerary_path
@@ -41,6 +38,6 @@
   def destroy
     itinerary = Itinerary.find(params[:id])
     itinerary.destroy
-    redirect_to :back
+    redirect_to itineraries_path
   end
 end

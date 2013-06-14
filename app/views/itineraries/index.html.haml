@@ -13,3 +13,10 @@
 %br
 %br
 
+- @itineraries.each do |itinerary|
+  / #{itinerary.user.name}
+  Itinerary ID: #{itinerary.id}
+  Arrival Date: #{itinerary.start_date}
+  Departure Date: #{itinerary.end_date}
+  %br
+
