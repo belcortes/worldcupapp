@@ -49,5 +49,5 @@ end
   city = City.find_by_stadium_name(names[i].mb_chars.normalize(:kd).gsub(/[^\x00-\x7F]/n,'').to_s)
   if city.nil?
   end
-  city.games << Game.create(datetime: dates[i])
+  city.games << Game.create(datetime: dates[i], location: names[i])
 end

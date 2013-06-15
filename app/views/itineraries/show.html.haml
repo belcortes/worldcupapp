@@ -1,14 +1,21 @@
 %body
   Your Current Itinerary: 
-  %br
   #{@itinerary.id}
   %br
-  #{@itinerary.start_date}
+  Arrival date: #{@itinerary.start_date}
   %br
-  #{@itinerary.end_date}
   %br
-  - Game.all.where("datetime between ? and ?", @itinerary.start_date, @itinerary.end_date).each do |game|
+  Games scheduled while you're in Brazil:
+  %br
+  - Game.where("datetime between ? and ?", @itinerary.start_date.to_datetime, @itinerary.end_date.to_datetime).each do |game|
     = game.datetime
-    = link_to'Edit', edit_itinerary_path(@itinerary), {method: :get, class: "button"}
-    = link_to('Delete', itinerary_path(@itinerary), {method: :delete, confirm: 'Are you sure you want to do this?', class: "button"})
+    = game.location
+    %br
+  %br
+  Departure date: #{@itinerary.end_date}
+  %br
+  %br  
+  = link_to'Edit', edit_user_itinerary_path(@itinerary), {method: :get, class: "button"}
+  = link_to('Delete', user_itinerary_path(@itinerary), {method: :delete, confirm: 'Are you sure you want to do this?', class: "button"})
+  %br
 

@@ -9,17 +9,14 @@
 %br
 %br
 
-/ itineraries.cities[index]
 
 - @itineraries.each do |itinerary|
-  / #{itinerary.user.name}
   Itinerary ID: #{itinerary.id}
+  %br
   Arrival Date: #{itinerary.start_date}
   %br
   Departure Date: #{itinerary.end_date}
   %br
-  Games Scheduled: 
-  - itinerary.games.each do |game|
-    = game.datetime
+
   %br
 
