@@ -44,6 +44,6 @@ class ItinerariesController < ApplicationController
   def destroy
     itinerary = Itinerary.find(params[:id])
     itinerary.destroy
-    redirect_to itineraries_path
+    redirect_to user_itineraries_path
   end
 end
