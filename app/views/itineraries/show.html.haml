@@ -7,8 +7,8 @@
   %br
   #{@itinerary.end_date}
   %br
-  - @itinerary.games.each do |game|
+  - Game.all.where("datetime between ? and ?", @itinerary.start_date, @itinerary.end_date).each do |game|
     = game.datetime
-      = link_to 'Edit', edit_itinerary_path(@itinerary), {method: :get, class: "button"}
-      = link_to('Delete', itinerary_path(@itinerary), {method: :delete, confirm: 'Are you sure you want to do this?', class: "button"})
+    = link_to'Edit', edit_itinerary_path(@itinerary), {method: :get, class: "button"}
+    = link_to('Delete', itinerary_path(@itinerary), {method: :delete, confirm: 'Are you sure you want to do this?', class: "button"})
 
