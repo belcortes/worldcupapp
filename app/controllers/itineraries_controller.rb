@@ -1,9 +1,13 @@
 class ItinerariesController < ApplicationController
 
   def index
-    @itineraries = Itinerary.all
+    if !current_user
+      redirect_to '/users/new'
+    else
+      @itineraries = Itinerary.all
     # redirect_to new_itinerary_path unless current_user.itineraries >= 1
     # redirect_to new_itinerary_path unless current_user.itineraries.size >= 1
+    end
   end
 
   def new
