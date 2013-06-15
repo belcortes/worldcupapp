@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :admin
+  attr_accessible :name, :email, :password, :admin, :itinerary_ids
 
   has_many :itineraries
   has_many :games, through: :itineraries

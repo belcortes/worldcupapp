@@ -11,6 +11,7 @@
 
   def create
     @itinerary = Itinerary.new(params[:itinerary])
+    # @itinerary.user_id = current_user.id if current_user
     if @itinerary.save
       redirect_to itineraries_path
     else
