@@ -20,12 +20,11 @@
             - if !current_user
               %a{:href => '/sessions/new'} Login
             - if !current_user 
-              %a{:href => '/users/new'}  Sign-Up
-            %a{:href => '/itineraries'}  Trip Planner
+              %a{:href => '/users/new'} Sign-Up
+            - if current_user
+              %a{:href => '/itineraries/new'} Trip Planner
             - if current_user
               %a{:href => '/itineraries'} Itineraries
-            - if current_user
-              %a{:href => '/itineraries/new'} New Itinerary
           %h4 
             %a{:href => '/cities'} Cities  
             %a{:href => '/games'} Games

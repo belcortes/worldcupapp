@@ -1,4 +1,4 @@
-class Game < ActiveRecord::Base
+ class Game < ActiveRecord::Base
   attr_accessible :city_id, :datetime, :location
 
   belongs_to :city
