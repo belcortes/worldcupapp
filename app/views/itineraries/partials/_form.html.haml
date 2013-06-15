@@ -1,4 +1,4 @@
-= form_for @itinerary do |f|
+= form_for [current_user,@itinerary] do |f|
   = f.label :name
   = f.text_field :name
   = f.label "Arrival date" 
