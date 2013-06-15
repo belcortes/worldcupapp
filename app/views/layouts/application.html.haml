@@ -22,14 +22,21 @@
             - if !current_user 
               %a{:href => '/users/new'}  Sign-Up
             %a{:href => '/itineraries'}  Trip Planner
+            - if current_user
+              %a{:href => '/itineraries'} Itineraries
+            - if current_user
+              %a{:href => '/itineraries/new'} New Itinerary
           %h4 
             %a{:href => '/cities'} Cities  
             %a{:href => '/games'} Games
             - if current_user && current_user.admin
               %a{:href => '/users'} Users
+            
           
 
           = yield
+      
+
           - if current_user
             = current_user.name
             = link_to 'logout', logout_path, method: :delete
@@ -39,18 +46,18 @@
         #map{:style => "width: 800px; height: 700px;"}
         :javascript
           var locations = [
-            ['Mineirao', -19.865833, -43.970833, 12],
-            ['Itaipava Arena Fonte Nova', -12.978611, -38.504167, 11],
-            ['Itaipava Arena Pernambuco', -8.04, -35.008056, 10],
-            ['Arena da Baixada', -25.448333, -49.276944, 9],
-            ['Arena das Dunas', -5.828938, -35.213864, 8],
-            ['Arena da Amazonia', -3.083056, -60.028056, 7],
-            ['Arena Pantanal', -15.603056, -56.120556, 6],
-            ['Estadio Beira-Rio', -30.065614, -51.236086, 4],
-            ['Castelao (Ceara)', -3.807267, -38.522481, 5],
-            ['Arena de Sao Paulo', -23.545531, -46.473373, 3],
-            ['Estadio Nacional Mane Garrincha', -15.7835, -47.899164, 2],
-            ['Estadio do Maracana', -22.912167, -43.230164, 1]
+            ['City: Sao Paulo <br /> Stadium:Mineirao', -19.865833, -43.970833, 12],
+            ['City: Sao Paulo <br /> Stadium:Itaipava Arena Fonte Nova', -12.978611, -38.504167, 11],
+            ['City: Sao Paulo <br /> Stadium:Itaipava Arena Pernambuco', -8.04, -35.008056, 10],
+            ['City: Sao Paulo <br /> Stadium:Arena da Baixada', -25.448333, -49.276944, 9],
+            ['City: Sao Paulo <br /> Stadium:Arena das Dunas', -5.828938, -35.213864, 8],
+            ['City: Sao Paulo <br /> Stadium:Arena da Amazonia', -3.083056, -60.028056, 7],
+            ['City: Sao Paulo <br /> Stadium:Arena Pantanal', -15.603056, -56.120556, 6],
+            ['City: Sao Paulo <br /> Stadium:Estadio Beira-Rio', -30.065614, -51.236086, 4],
+            ['City: Sao Paulo <br /> Stadium: Castelao (Ceara)', -3.807267, -38.522481, 5],
+            ['City: São Paulo <br /> Stadium: Arena de São Paulo', -23.545531, -46.473373, 3],
+            ['City: Brasília <br /> Stadium: Estadio Nacional Mane Garrincha', -15.7835, -47.899164, 2],
+            ['City: Rio de Janeiro <br /> Stadium: Estadio do Maracana', -22.912167, -43.230164, 1]
           ];
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 4,
@@ -78,3 +85,5 @@
 
     :javascript 
       $(document).foundation();
+
+    

@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+ class UsersController < ApplicationController
   before_filter :ensure_admin, only: [:index, :destroy]
   def index
     @users = User.all
@@ -34,10 +34,3 @@ class UsersController < ApplicationController
       redirect_to :back
   end
 end
-
-  # def create
-  #   song = Song.new(params[:song])
-  #   song.save!
-  #   render nothing: true
-  # end
-  

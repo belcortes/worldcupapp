@@ -1,5 +1,4 @@
 class GamesController < ApplicationController
-
   before_filter :ensure_admin, only: [:create, :update, :destroy]
 
   def index
