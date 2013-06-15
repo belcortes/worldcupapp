@@ -7,16 +7,16 @@
 %a{href:"/itineraries/new"}Plan your trip today!
 %br
 %br
-%br
 
 
 - @itineraries.each do |itinerary|
+  %br
   Itinerary ID: #{itinerary.id}
   %br
   Arrival Date: #{itinerary.start_date}
   %br
   Departure Date: #{itinerary.end_date}
   %br
-
+  = link_to 'show me this itinerary', user_itinerary_path(current_user.id, itinerary.id), class: 'button'
   %br
 

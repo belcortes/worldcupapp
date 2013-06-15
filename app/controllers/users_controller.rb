@@ -9,7 +9,8 @@
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to '/sessions/new'
+      session[:user_id] = @user.id
+      redirect_to new_user_itinerary_path(current_user.id)
     else
       render :new
     end
