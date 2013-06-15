@@ -22,15 +22,14 @@
             - if !current_user 
               %a{:href => '/users/new'} Sign-Up
             - if current_user
-              %a{:href => '/itineraries/new'} Trip Planner
+              %a{:href => "/users/#{current_user.id}/itineraries/new"} Trip Planner
             - if current_user
-              %a{:href => '/itineraries'} Itineraries
+              %a{:href => "/users/#{current_user.id}/itineraries"} Itineraries
           %h4 
             %a{:href => '/cities'} Cities  
             %a{:href => '/games'} Games
             - if current_user && current_user.admin
               %a{:href => '/users'} Users
-            
           
 
           = yield

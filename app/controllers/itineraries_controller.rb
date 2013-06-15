@@ -4,7 +4,7 @@ class ItinerariesController < ApplicationController
     if !current_user
       redirect_to '/users/new'
     else
-      @itineraries = Itinerary.all
+      @itineraries = current_user.itineraries.all
     # redirect_to new_itinerary_path unless current_user.itineraries >= 1
     # redirect_to new_itinerary_path unless current_user.itineraries.size >= 1
     end
@@ -18,7 +18,7 @@ class ItinerariesController < ApplicationController
     @itinerary = current_user.itineraries.new(params[:itinerary])
     # @itinerary.user_id = current_user.id if current_user
     if @itinerary.save
-      redirect_to itineraries_path
+      redirect_to user_itineraries_path
     else
       render :new
     end
@@ -35,9 +35,9 @@ class ItinerariesController < ApplicationController
   def update
     @itinerary = Itinerary.find(params[:id])
     if @itinerary.update_attributes(params[:itinerary])
-      redirect_to itineraries_path
+      redirect_to user_itineraries_path
     else
-      redirect_to edit_itinerary_path
+      redirect_to edit_user_itinerary_path
     end
   end
 
