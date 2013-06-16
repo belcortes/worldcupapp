@@ -76,23 +76,23 @@ a:hover {
 }
 .signup {
   padding-right: 7px;
-  border-right: 1px solid #d4d4d4;
+  border-right: 1px solid #589c21;
 }
 .trip {
   padding-right: 7px;
-  border-right: 1px solid #d4d4d4;
+  border-right: 1px solid #589c21;
 }
 .itinerary {
   padding-right: 7px;
-  border-right: 1px solid #d4d4d4;
+  border-right: 1px solid #589c21;
 }
 .city {
   padding-right: 7px;
-  border-right: 1px solid #d4d4d4;
+  border-right: 1px solid #589c21;
 }
 .game {
   padding-right: 7px;
-  border-right: 1px solid #d4d4d4;
+  border-right: 1px solid #589c21;
 }
 .games {
   height: 700px;
@@ -108,14 +108,13 @@ a:hover {
   margin-bottom: 20px;
   background: white;
   margin-top: 20px;
-  box-sizing: border-box;
+/*  box-sizing: border-box;*/
   box-shadow: 0 2px 2px -2px gray;
 }
 
 .content {
   margin-top: 30px;
   height: 700px;
-  width: ;
 /*  margin-bottom: 10px;*/
   background: rgb(255, 255, 255);
 }
