@@ -10,34 +10,32 @@
     = csrf_meta_tags
   %body
     %div.container
-    .row
-      .large-4.columns
-        %h3 
-          %a{:href => '/'} Joga Bonito
-          
-        .row.sidebar
-          %h4 
-            - if !current_user
-              %a{:href => '/sessions/new'} Login
-            - if !current_user 
-              %a{:href => '/users/new'} Sign-Up
-            - if current_user
-              %a{:href => "/users/#{current_user.id}/itineraries/new"} Trip Planner
-            - if current_user
-              %a{:href => "/users/#{current_user.id}/itineraries"} Itineraries
-          %h4 
-            %a{:href => '/cities'} Cities  
-            %a{:href => '/games'} Games
-            - if current_user && current_user.admin
-              %a{:href => '/users'} Users
-          
+    .row.navbar
+      %h4.alignright.large-9.columns
+        - if !current_user
+          %a.login{:href => '/sessions/new'} Login
+        - if !current_user 
+          %a.signup{:href => '/users/new'} Sign-Up
+        - if current_user
+          %a.trip{:href => "/users/#{current_user.id}/itineraries/new"} Trip Planner
+        - if current_user
+          %a.itinerary{:href => "/users/#{current_user.id}/itineraries"} Itineraries 
+        %a.city{:href => '/cities'} Cities  
+        %a.game{:href => '/games'} Games
+        - if current_user && current_user.admin
+          %a{:href => '/users'} Users
+      %h3.alignleft.large-3.columns
+        %a{:href => '/'} Joga Bonito
+    .row.content
+      .large-4.columns  
+        
 
-          = yield
-      
+        = yield
+    
 
-          - if current_user
-            = current_user.name
-            = link_to 'logout', logout_path, method: :delete
+        - if current_user
+          = current_user.name
+          = link_to 'logout', logout_path, method: :delete
       .large-8.columns
         / %h3 Eight Columns
         /map starts
@@ -69,13 +67,19 @@
             marker = new google.maps.Marker({
               position: new google.maps.LatLng(locations[i][1], locations[i][2]),
               map: map,
+              url:"/cities",
               icon: image,  
               animation: google.maps.Animation.DROP
             });
-            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
               return function() {
                 infowindow.setContent(locations[i][0]);
                 infowindow.open(map, marker);
+              }
+            })(marker, i));
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+              return function() {
+                window.location.href = marker.url;
               }
             })(marker, i));
           }
