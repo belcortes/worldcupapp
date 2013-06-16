@@ -11,21 +11,30 @@
   %body
     %div.container
     .row.navbar
-      %h4.alignright.large-9.columns
-        - if !current_user
-          %a.login{:href => '/sessions/new'} Login
-        - if !current_user 
-          %a.signup{:href => '/users/new'} Sign-Up
-        - if current_user
-          %a.trip{:href => "/users/#{current_user.id}/itineraries/new"} Trip Planner
-        - if current_user
-          %a.itinerary{:href => "/users/#{current_user.id}/itineraries"} Itineraries 
-        %a.city{:href => '/cities'} Cities  
-        %a.game{:href => '/games'} Games
-        - if current_user && current_user.admin
-          %a{:href => '/users'} Users
-      %h3.alignleft.large-3.columns
-        %a{:href => '/'} Joga Bonito
+      .row.topnav
+        %h4.alignright.large-7.columns
+          - if !current_user
+            %a.login{:href => '/sessions/new'} Login
+          - if !current_user 
+            %a.signup{:href => '/users/new'} Sign-Up
+          - if current_user
+            %a.trip{:href => "/users/#{current_user.id}/itineraries/new"} Trip Planner
+          - if current_user
+            %a.itinerary{:href => "/users/#{current_user.id}/itineraries"} Itineraries 
+          %a.city{:href => '/cities'} Cities  
+          %a.game{:href => '/games'} Games
+          - if current_user && current_user.admin
+            %a{:href => '/users'} Users
+        / .alignleft.large-3.columns
+        /   %img(src="/worldcuplogo.jpg")
+        %h3.alignleft.large-3.columns
+          %a{:href => '/'} Joga Bonito
+      .row.logout.large-12.columns
+        %h7
+          - if current_user
+            = current_user.name
+            = link_to 'logout', logout_path, method: :delete
+      
     .row.content
       .large-4.columns  
         
@@ -33,9 +42,7 @@
         = yield
     
 
-        - if current_user
-          = current_user.name
-          = link_to 'logout', logout_path, method: :delete
+        
       .large-8.columns
         / %h3 Eight Columns
         /map starts
@@ -87,5 +94,13 @@
 
     :javascript 
       $(document).foundation();
+
+  %footer.row
+    .large-12.columns
+      %hr/
+      .row
+        .large-6.columns
+          %p &copy; Isabel Cortes, Alex Davidow
+
 
     
