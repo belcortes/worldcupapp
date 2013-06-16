@@ -15,6 +15,49 @@ a {
   color: black;
 }
 
+.alignleft {
+  text-align: right;
+}
+
+.alignright {
+  text-align: left; 
+}
+
+.login {
+  padding-right: 7px;
+  border-right: 1px solid #16222c;
+}
+.signup {
+  padding-right: 7px;
+  border-right: 1px solid #16222c;
+}
+.trip {
+  padding-right: 7px;
+  border-right: 1px solid #16222c;
+}
+.itinerary {
+  padding-right: 7px;
+  border-right: 1px solid #16222c;
+}
+.city {
+  padding-right: 7px;
+  border-right: 1px solid #16222c;
+}
+/*.game {
+  border-right: 1px solid #16222c;
+}*/
+
+.navbar {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+.content {
+  margin-top: 30px;
+}
+
+/*box-shadow: h-shadow v-shadow blur spread color inset;*/
 /*map.set('styles', [
   {
     featureType: 'road',
