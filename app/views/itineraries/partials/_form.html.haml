@@ -8,10 +8,10 @@
   = f.label "yyyy/mm/dd"
   = f.text_field :end_date, class: "datepicker"  # won't accept invalid inputs including fake dates (i.e. 2013-06-31)  
 
-  - @games.each do |game|
-    %span
-    = game.location
-    = check_box_tag 'itinerary[game_ids][]', game.id, game.in?(@itinerary.games.to_a)
+  / - @games.each do |game|
+  /   %span
+  /   = game.location
+  /   = check_box_tag 'itinerary[game_ids][]', game.id, game.in?(@itinerary.games.to_a)
   = f.submit
 
 - if @itinerary.errors.any?

@@ -12,7 +12,7 @@ class ItinerariesController < ApplicationController
 
   def new
     @itinerary = current_user.itineraries.new
-    @games = Game.all
+    # @games = Game.all
   end
 
   def create
@@ -31,7 +31,7 @@ class ItinerariesController < ApplicationController
 
   def edit
     @itinerary = Itinerary.find(params[:id])
-    @games = Game.all
+    # @games = Game.all
   end
 
   def update

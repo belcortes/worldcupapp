@@ -9,7 +9,10 @@
 
 body {
   margin-bottom: 5px;
+/*  margin-top: 20px;*/
   font-family: 'Open Sans', sans-serif;
+  background: url('http://upload.wikimedia.org/wikipedia/commons/c/c8/Salt_Lake_Stadium_-_Yuva_Bharati_Krirangan_,_Kolkata_-_Calcutta_3.jpg') no-repeat center center fixed;
+  /*background-size: cover;*/
 }
 
 .sched {
@@ -27,10 +30,11 @@ form#new_user.new_user {
 .row {
   max-width: 95%;
   margin-top: 15px;
+  margin-bottom: 2px;
 }
 .intro {
   padding: 7px;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #589c21;
 }
 
 .sidebar {
@@ -44,6 +48,10 @@ form#new_user.new_user {
 
 a {
   color: black;
+}
+
+a:hover {
+  color: #589c21;
 }
 
 .alignleft {
@@ -64,7 +72,7 @@ a {
 
 .login {
   padding-right: 7px;
-  border-right: 1px solid #d4d4d4;
+  border-right: 1px solid #589c21;
 }
 .signup {
   padding-right: 7px;
@@ -87,17 +95,18 @@ a {
   border-right: 1px solid #d4d4d4;
 }
 .games {
-  height: 810px;
+  height: 700px;
   overflow-y: scroll;
 }
 .large-4.columns {
-  height: 750px;
+  height: 700px;
   overflow-y: scroll;
   margin-bottom: 30px;
 }
 
 .navbar {
   margin-bottom: 20px;
+  background: white;
   margin-top: 20px;
   box-sizing: border-box;
   box-shadow: 0 2px 2px -2px gray;
@@ -105,40 +114,12 @@ a {
 
 .content {
   margin-top: 30px;
+  height: 700px;
+  width: ;
+/*  margin-bottom: 10px;*/
+  background: rgb(255, 255, 255);
 }
 
-/*box-shadow: h-shadow v-shadow blur spread color inset;*/
-/*map.set('styles', [
-  {
-    featureType: 'road',
-    elementType: 'geometry',
-    stylers: [
-      { color: '#000001' },
-      { weight: 1.6 }
-    ]
-  }, {
-    featureType: 'road',
-    elementType: 'labels',
-    stylers: [
-      { saturation: -100 },
-      { invert_lightness: true }
-    ]
-  }, {
-    featureType: 'landscape',
-    elementType: 'geometry',
-    stylers: [
-      { hue: '##efec9f' },
-      { gamma: 1.4 },
-      { saturation: 82 },
-      { lightness: 96 }
-    ]
-  }, {
-    featureType: 'poi.school',
-    elementType: 'geometry',
-    stylers: [
-      { hue: '#fff700' },
-      { lightness: -15 },
-      { saturation: 99 }
-    ]
-  }
-]);*/
+.large-12.columns {
+  background-color: white;
+}
