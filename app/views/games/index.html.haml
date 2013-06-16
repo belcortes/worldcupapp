@@ -1,8 +1,11 @@
-%h3 All The Games of World Cup 2014 in Brazil!
-- @games.each do |game|
-  Game Date & Time: #{link_to game.datetime, game_path(game.id)}
-  %br
-  Host Stadium: #{game.city.stadium_name}
-  %br
-  Host City: #{link_to game.city.name, city_path(game.city.id)}
-  %br
+%h5 World Cup 2014 Game Schedule
+%br
+%p.sched
+  - @games.each do |game|
+    Game Date & Time: #{link_to game.datetime, game_path(game.id)}
+    %br
+    Host Stadium: #{game.city.stadium_name}
+    %br
+    Host City: #{link_to game.city.name, city_path(game.city.id)}
+    %br
+    %br

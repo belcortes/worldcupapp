@@ -9,6 +9,19 @@
 
 body {
   margin-bottom: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.sched {
+  line-height: 20px;
+}
+
+form#new_user.new_user {
+  width:350px;
+}
+
+.bottom {
+  margin-bottom: 2px;
 }
 
 .row {
