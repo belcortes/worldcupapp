@@ -1,23 +1,23 @@
 %br
 %br
 .c_info
-- @cities.each do |city|
-  City:
-  #{link_to city.name, city_path(city.id)} 
-  %br/
-  Population Size:
-  = city.pop_size 
-  %br/
-  Airports:
-  = city.airports
-  %br/
-  Fun Fact:
-  = city.fun_fact
-  %br/
-  Stadium:
-  = city.stadium_name
-  %br/
-  Stadium Capacity:
-  = city.stadium_cap
-  %br/
-  %br/
+  - @cities.each do |city|
+    City:
+    #{link_to city.name, city_path(city.id)} 
+    %br/
+    Population Size:
+    = city.pop_size 
+    %br/
+    Airports:
+    = city.airports
+    %br/
+    Fun Fact:
+    = city.fun_fact
+    %br/
+    Stadium:
+    = city.stadium_name
+    %br/
+    Stadium Capacity:
+    = city.stadium_cap
+    %br/
+    %br/

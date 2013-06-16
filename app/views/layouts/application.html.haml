@@ -15,31 +15,33 @@
       .row.topnav
         %h4.alignright.large-7.columns
           - if !current_user
-            %a.login{:href => '/sessions/new'} Login
+            %a.login{:href => '/sessions/new'} LOGIN
           - if !current_user 
-            %a.signup{:href => '/users/new'} Sign-Up
+            %a.signup{:href => '/users/new'} SIGN-UP
           - if current_user
-            %a.trip{:href => "/users/#{current_user.id}/itineraries/new"} Trip Planner
+            %a.trip{:href => "/users/#{current_user.id}/itineraries/new"} TRIP-PLANNER
           - if current_user
-            %a.itinerary{:href => "/users/#{current_user.id}/itineraries"} Itineraries 
-          %a.city{:href => '/cities'} Cities  
-          %a.game{:href => '/games'} Games
+            %a.itinerary{:href => "/users/#{current_user.id}/itineraries"} ITINERARIES
+          %a.city{:href => '/cities'} CITIES  
+          %a.game{:href => '/games'} GAMES
           - if current_user && current_user.admin
-            %a{:href => '/users'} Users
-        / .alignleft.large-3.columns
-        /   %img(src="/worldcuplogo.jpg")
+            %a{:href => '/users'} USERS
         %h3.alignleft.large-3.columns
-          %a{:href => '/'} Joga Bonito
+          %img(src="/brazilflag.jpg")
+          %a{:href => '/'} JOGA BONITO
       .row.logout.large-12.columns
         %h7
           - if current_user
             = current_user.name
             = link_to 'logout', logout_path, method: :delete
+    .line-separator
+
       
     .row.content
+      / %img(src="http://us.123rf.com/400wm/400/400/2nix/2nix1205/2nix120500145/14512938-white-stripe-on-the-green-soccer-field-from-top-view.jpg")
       .large-4.columns  
         
-
+      
         = yield
     
 

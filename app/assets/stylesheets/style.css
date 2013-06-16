@@ -10,14 +10,18 @@
 body {
   margin-bottom: 5px;
 /*  margin-top: 20px;*/
-  font-family: 'Open Sans', sans-serif;
-  /*background: url('http://upload.wikimedia.org/wikipedia/commons/c/c8/Salt_Lake_Stadium_-_Yuva_Bharati_Krirangan_,_Kolkata_-_Calcutta_3.jpg') no-repeat center center fixed;*/
-  /*background-size: cover;*/
+  font-family: cambria;
+  line-height: 16px;
+/*  background: url('http://c1038.r38.cf3.rackcdn.com/group2/building12235/media/04p8p68.jpg') no-repeat center center fixed;
+*/  /*background-size: cover;*/
 }
-
 .sched {
   line-height: 20px;
 }
+
+/*.c_info {
+  border-bottom: 1px;
+}*/
 
 form#new_user.new_user {
   width:350px;
@@ -34,7 +38,8 @@ form#new_user.new_user {
 }
 .intro {
   padding: 7px;
-  border: 1px solid #589c21;
+  background: rgba(000, 000, 000, 0.1);
+  /*border: 1px solid #589c21;*/
 }
 
 .sidebar {
@@ -46,8 +51,14 @@ form#new_user.new_user {
   max-height: 100%;
 }
 
+footer {
+  background: url("http://wakpaper.com/large/Fields_wallpapers_46.jpg");
+}
+
 a {
   color: black;
+  font-family: 'lato', sans-serif;
+  font-weight: normal;
 }
 
 a:hover {
@@ -102,6 +113,16 @@ a:hover {
   height: 700px;
   overflow-y: scroll;
   margin-bottom: 30px;
+  line-height: 23px;
+}
+
+.line-separator{
+height:1px;
+background:#717171;
+border-bottom:1px solid yellow;
+/*width: 1206.5px;*/
+
+
 }
 
 .navbar {
@@ -110,13 +131,24 @@ a:hover {
   margin-top: 20px;
 /*  box-sizing: border-box;*/
   box-shadow: 0 2px 2px -2px gray;
+  box-shadow: 0 2px 2px -2px green;
 }
 
 .content {
   margin-top: 30px;
   height: 700px;
 /*  margin-bottom: 10px;*/
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.5), url("http://us.123rf.com/400wm/400/400/2nix/2nix1205/2nix120500145/14512938-white-stripe-on-the-green-soccer-field-from-top-view.jpg"); 
+}
+
+a.button {
+  background: #589c21;
+  font-family: 'lato', sans-serif;
+}
+
+a.button:hover {
+  background-color: #ffe600;
+  color: #589c21;
 }
 
 .large-12.columns {
