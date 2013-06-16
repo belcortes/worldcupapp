@@ -2,9 +2,22 @@
   background-color: red;  
 }*/
 
+/*img {
+  height: 100px;
+  width: 100px;
+}*/
+
+body {
+  margin-bottom: 5px;
+}
+
 .row {
   max-width: 95%;
   margin-top: 15px;
+}
+.intro {
+  padding: 7px;
+  border: 1px solid #d4d4d4;
 }
 
 .sidebar {
@@ -17,40 +30,59 @@ a {
 
 .alignleft {
   text-align: right;
+  margin-bottom: 0px;
 }
 
 .alignright {
   text-align: left; 
+  margin-bottom: 0px;
+}
+.row.logout {
+  margin-top: 0px;
+  text-align: right;
+  margin-bottom: 10px;
+  padding-right: 0px;
 }
 
 .login {
   padding-right: 7px;
-  border-right: 1px solid #16222c;
+  border-right: 1px solid #d4d4d4;
 }
 .signup {
   padding-right: 7px;
-  border-right: 1px solid #16222c;
+  border-right: 1px solid #d4d4d4;
 }
 .trip {
   padding-right: 7px;
-  border-right: 1px solid #16222c;
+  border-right: 1px solid #d4d4d4;
 }
 .itinerary {
   padding-right: 7px;
-  border-right: 1px solid #16222c;
+  border-right: 1px solid #d4d4d4;
 }
 .city {
   padding-right: 7px;
-  border-right: 1px solid #16222c;
+  border-right: 1px solid #d4d4d4;
 }
-/*.game {
-  border-right: 1px solid #16222c;
-}*/
+.game {
+  padding-right: 7px;
+  border-right: 1px solid #d4d4d4;
+}
+.games {
+  height: 810px;
+  overflow-y: scroll;
+}
+.large-4.columns {
+  height: 750px;
+  overflow-y: scroll;
+  margin-bottom: 30px;
+}
 
 .navbar {
   margin-bottom: 20px;
   margin-top: 20px;
-  box-shadow: 0 4px 2px -2px gray;
+  box-sizing: border-box;
+  box-shadow: 0 2px 2px -2px gray;
 }
 
 .content {

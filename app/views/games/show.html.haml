@@ -1,8 +1,10 @@
-%h2 Individual Game Info
+.row.games
+  %h2 Individual Game Info
 
-Game Date & Time: #{@game.datetime}
-%br
-Host Stadium: #{@game.city.stadium_name}
-%br
-Host City: #{link_to @game.city.name, city_path(@game.city.id)}
-%br
+  Game Date & Time: #{@game.datetime}
+  %br
+  Host Stadium: #{@game.city.stadium_name}
+  %br
+  Host City: #{link_to @game.city.name, city_path(@game.city.id)}
+  %br
+  %br
