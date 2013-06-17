@@ -23,6 +23,11 @@ body {
   border-bottom: 1px;
 }*/
 
+div.large-12.columns {
+  position: relative;
+  background: url("http://loadpaper.com/large/Fields_wallpapers_258.jpg") center center fixed;
+}
+
 form#new_user.new_user {
   width:350px;
 }
