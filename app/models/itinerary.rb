@@ -2,6 +2,7 @@ class Itinerary < ActiveRecord::Base
   attr_accessible :end_date, :name, :start_date, :user_id
 
   has_and_belongs_to_many :games
+  has_many :cities, through: :games
 
   validates :name, presence: true
   validate :validate_end_date_before_start_date
