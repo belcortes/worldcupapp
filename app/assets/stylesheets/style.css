@@ -26,6 +26,7 @@ body {
 div.large-12.columns {
   position: relative;
   background: url("http://loadpaper.com/large/Fields_wallpapers_258.jpg") center center fixed;
+  color: white;
 }
 
 form#new_user.new_user {
