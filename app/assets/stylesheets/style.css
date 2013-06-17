@@ -23,6 +23,9 @@ body {
   border-bottom: 1px;
 }*/
 
+#map label { width: auto; display:inline; }
+#map img { max-width: none; }
+
 div.large-12.columns {
   position: relative;
   background: url("http://loadpaper.com/large/Fields_wallpapers_258.jpg") center center fixed;
