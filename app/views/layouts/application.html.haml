@@ -34,7 +34,7 @@
           - if current_user
             = current_user.name
             = link_to 'logout', logout_path, method: :delete
-    .line-separator
+      %hr.two/
 
       
     .row.content
@@ -100,7 +100,8 @@
 
   %footer.row
     .large-12.columns
-      %hr/
+      %hr.one/
+      %hr.two/
       .row
         .large-6.columns
           %p &copy; Isabel Cortes, Alex Davidow

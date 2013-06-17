@@ -51,9 +51,9 @@ form#new_user.new_user {
   max-height: 100%;
 }
 
-footer {
+/*footer {
   background: url("http://wakpaper.com/large/Fields_wallpapers_46.jpg");
-}
+}*/
 
 a {
   color: black;
@@ -154,3 +154,12 @@ a.button:hover {
 .large-12.columns {
   background-color: white;
 }
+
+hr.one {
+  border-top-color: #589c21;
+}
+
+hr.two {
+  border-top-color: yellow;
+}
+
