@@ -11,7 +11,7 @@
   Games scheduled while you're in Brazil:
   %br
   - Game.where("datetime between ? and ?", @itinerary.start_date.to_datetime, @itinerary.end_date.to_datetime).order(:datetime).each do |game|
-    = game.datetime
+    = game.friendly_date
     = game.location
     %br
   %br

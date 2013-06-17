@@ -2,7 +2,7 @@
 %br
 %p.sched
   - @games.each do |game|
-    Game Date & Time: #{link_to game.datetime, game_path(game.id)}
+    Game Date & Time: #{link_to game.friendly_date, game_path(game.id)}
     %br
     Host Stadium: #{game.city.stadium_name}
     %br
