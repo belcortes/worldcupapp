@@ -8,10 +8,10 @@
   = f.label :name
   = f.text_field :name
   = f.label "Arrival date" 
-  = f.label "yyyy/mm/dd"
+  = f.label " yyyy/mm/dd"
   = f.text_field :start_date, class: "datepicker"  # won't accept invalid inputs including fake dates (i.e. 2013-06-31)
   = f.label :departure_date
-  = f.label "yyyy/mm/dd"
+  = f.label " yyyy/mm/dd"
   = f.text_field :end_date, class: "datepicker"  # won't accept invalid inputs including fake dates (i.e. 2013-06-31)  
 
   / - @cities.each do |city|
